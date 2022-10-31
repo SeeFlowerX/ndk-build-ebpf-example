@@ -33,3 +33,11 @@ Q: 和参考文章有什么不同吗？
 A: 编译增加了`-g`选项，作用是生成带有BTF信息的`.o`文件
 
     https://clang.llvm.org/docs/UsersManual.html#cmdoption-g
+
+如果没有BTF信息，那么加载eBPF程序时会要求内核启用`CONFIG_DEBUG_INFO`和`CONFIG_DEBUG_INFO_BTF`，否则无法正确加载
+
+```bash
+readelf -S out/stack.o | grep BTF
+```
+
+![](./images/Snipaste_2022-10-31_15-02-46.png)
