@@ -29,6 +29,7 @@ mkdir system && mv core system/ && mv bpf system/
 # 其他
 
 Q: 和参考文章有什么不同吗？
+
 A: 编译增加了`-g`选项，作用是生成带有BTF信息的`.o`文件
 
-    - https://clang.llvm.org/docs/UsersManual.html#cmdoption-g
+    https://clang.llvm.org/docs/UsersManual.html#cmdoption-g
